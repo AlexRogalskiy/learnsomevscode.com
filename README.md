@@ -1,3 +1,3 @@
-# Learn Some VS Code
+# Learn Some VS Code
 
-Learn VS Code tips & tricks. Be more productive. Ship faster.
+Learn VS Code tips & tricks. Be more productive. Ship faster.

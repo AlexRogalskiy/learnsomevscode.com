@@ -34,12 +34,17 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
+              Written by{" "}
               <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+                <strong>{author}</strong>
+              </a>{" "}
+              who lives and works in Montreal, Canada 🍁. He's been using VS
+              Code for years and created
+              {` `}
+              <a href="https://marketplace.visualstudio.com/publishers/nicoespeon">
+                useful extensions
               </a>
+              .
             </p>
           </Container>
         )
@@ -50,7 +55,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed

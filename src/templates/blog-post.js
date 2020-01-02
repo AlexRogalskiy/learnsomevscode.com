@@ -31,6 +31,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
+        {/* TODO: add CTA (sign-up form) */}
         <hr
           style={{
             marginBottom: rhythm(1),

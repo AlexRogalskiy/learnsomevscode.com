@@ -8,14 +8,13 @@ class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
     let header
 
-    if (location.pathname === rootPath || location.pathname === blogPath) {
+    if (location.pathname === rootPath) {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(1.4),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -26,7 +25,7 @@ class Layout extends React.Component {
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={location.pathname === blogPath ? `/blog/` : `/`}
+            to="/"
           >
             {title}
           </Link>
@@ -46,7 +45,7 @@ class Layout extends React.Component {
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={`/blog/`}
+            to="/"
           >
             {title}
           </Link>
@@ -67,9 +66,7 @@ class Layout extends React.Component {
           <main>{children}</main>
         </div>
         <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          Copyright © 2019-{new Date().getFullYear()}, Nicolas Carlo
         </Footer>
       </Wrapper>
     )
@@ -78,6 +75,7 @@ class Layout extends React.Component {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  border-top: 5px solid #1d89d2;
 `
 
 const Footer = styled.footer`
