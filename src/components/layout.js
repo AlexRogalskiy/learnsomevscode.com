@@ -76,6 +76,7 @@ class Layout extends React.Component {
 const Wrapper = styled.div`
   min-height: 100vh;
   border-top: 5px solid #1d89d2;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 `
 
 const Footer = styled.footer`

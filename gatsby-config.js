@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Learn Some VS Code`,
+    title: `Learn Some VS Code`,
     author: `Nicolas Carlo`,
-    description: `Learn VS Code tips & tricks. Be more productive. Ship faster.`,
+    description: `Learn VS Code tips & tricks. Be more productive. Ship faster.`,
     siteUrl: `https://learnsomevscode.com`,
     social: {
       twitter: `nicoespeon`,
@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Learn Some VS Code`,
+        name: `Learn Some VS Code`,
         short_name: `LSVSC`,
         start_url: `/`,
         background_color: `#ffffff`,

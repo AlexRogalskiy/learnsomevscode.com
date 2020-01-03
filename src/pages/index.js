@@ -7,6 +7,14 @@ import Bio from "../components/bio"
 import { rhythm } from "../utils/typography"
 
 class IndexPage extends React.Component {
+  componentDidMount() {
+    const script = document.createElement("script")
+    script.async = true
+    script.src = "https://learnsomevscode.ck.page/6894801fd3/index.js"
+    script.setAttribute("data-uid", "6894801fd3")
+    this.signupForm.appendChild(script)
+  }
+
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -15,8 +23,7 @@ class IndexPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Home" keywords={[`vscode`, `tips`, `blog`]} />
-        <p>Learn VS Code tips & tricks. Be more productive. Ship faster.</p>
-        {/* TODO: add sign-up form */}
+        <div ref={el => (this.signupForm = el)}></div>
         <h2>Latest articles</h2>
         <ul style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
