@@ -6,6 +6,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import CTA from "../components/cta"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -31,7 +32,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
-        {/* TODO: add CTA (sign-up form) */}
+        <CTA />
         <hr
           style={{
             marginBottom: rhythm(1),
